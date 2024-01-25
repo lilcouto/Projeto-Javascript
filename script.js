@@ -27,5 +27,11 @@ while (adicionarMaisItens) {
   adicionarMaisItens = prompt("Deseja adicionar mais um item ao carrinho? (Digite 'sim' ou 'não')").toLowerCase() === 'sim';
 }
 
-console.log("Conteúdo final do carrinho: ", carrinhoCompras);
+let totalCompra = 0;
 
+for (let i = 0; i < carrinhoCompras.length; i++) {
+  totalCompra += carrinhoCompras[i].quantidade * carrinhoCompras[i].preco;
+}
+
+console.log("Conteúdo final do carrinho: ", ...carrinhoCompras);
+console.log("Total do carrinho: " + totalCompra + " reais.");
