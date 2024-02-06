@@ -2,7 +2,7 @@
 //Declarar variáveis, objetos e arrays necessários para simular o processo selecionado.
 //Criar funções e/ou métodos para realizar operações (soma, subtração, concatenação, divisão, porcentagem, etc.).
 //Efetuar uma saída, que é o resultado dos dados processados, por alert() ou console.log().
-let carrinhoCompras = [];
+/*let carrinhoCompras = [];
 
 function adicionarCarrinho() {
   let nomeItem = prompt("Digite o nome do item:");
@@ -34,4 +34,4 @@ for (let i = 0; i < carrinhoCompras.length; i++) {
 }
 
 console.log("Conteúdo final do carrinho: ", ...carrinhoCompras);
-console.log("Total do carrinho: " + totalCompra + " reais.");
+console.log("Total do carrinho: " + totalCompra + " reais.");*/
