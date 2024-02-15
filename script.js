@@ -98,3 +98,66 @@ let produtos = [
     preco: 80,
   }
 ];
+
+const categories = [...new Set(produtos.map((item) => { return item }))]
+let i = 0;
+document.getElementById('loja').innerHTML = categories.map((item) => {
+  var { imagem, nome, preco } = item;
+  return (
+    `<div class='product'>
+        <img src=${imagem}></img>    
+        <div class='bottom'>
+        <p>${nome}</p>
+        <h2>R$ ${preco},00</h2>` +
+    "<button onclick='addtocart(" + (i++) + ")'>Comprar</button>" +
+    `</div>
+        </div>`
+  )
+}).join('')
+
+var cart = [];
+
+function addtocart(a) {
+  cart.push({ ...categories[a] });
+  saveCartToSessionStorage();
+  displaycart();
+}
+function delElement(a) {
+  cart.splice(a, 1);
+  saveCartToSessionStorage();
+  displaycart();
+}
+function saveCartToSessionStorage() {
+  sessionStorage.setItem('cart', JSON.stringify(cart));
+}
+function displaycart() {
+  let j = 0, total = 0;
+  document.getElementById("count").innerHTML = cart.length;
+  if (cart.length == 0) {
+    document.getElementById('cartItem').innerHTML = "Seu carrinho está vazio";
+    document.getElementById("total").innerHTML = "R$ " + 0 + ",00";
+  }
+  else {
+    document.getElementById("cartItem").innerHTML = cart.map((items) => {
+      var { imagem, nome, preco } = items;
+      total = total + preco;
+      document.getElementById("total").innerHTML = "R$ " + total + ".00";
+      return (
+        `<div class='cart-item'>
+                <div class='row-img'>
+                    <img class='rowimg' src=${imagem}>
+                </div>
+                <p style='font-size:12px;'>${nome}</p>
+                <h2 style='font-size: 15px;'>R$ ${preco},00</h2>` +
+        "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
+      );
+    }).join('');
+  }
+}
+window.onload = function () {
+  const savedCart = sessionStorage.getItem('cart');
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+    displaycart();
+  }
+};
