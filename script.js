@@ -141,7 +141,7 @@ function displaycart() {
     document.getElementById("cartItem").innerHTML = cart.map((items) => {
       var { imagem, nome, preco } = items;
       total = total + preco;
-      document.getElementById("total").innerHTML = "R$ " + total + ".00";
+      document.getElementById("total").innerHTML = "R$ " + total + ",00";
       return (
         `<div class='cart-item'>
                 <div class='row-img'>
