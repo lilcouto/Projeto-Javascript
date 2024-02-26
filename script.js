@@ -4,32 +4,35 @@ let produtos = [
     imagem: 'assets/img/buffalo-trace-bourbon-750-ml_1_250.webp',
     nome: 'Whisky Buffalo Trace Bourbon 750 ml',
     preco: 130,
-    pagina: 'projeto_bebidas\whisky_buffalo\whisky.html',
+    pagina: 'projeto_bebidas/Whisky_Buffalo_Trace_Bourbon/whisky.html',
   },
   {
     id: 2,
     imagem: 'assets/img/espumante-cava-freixenet-carta-nevada-semi-seco_1_250.webp',
     nome: 'Espumante Cava Freixenet Carta Nevada 750 ml',
     preco: 60,
-    pagina: 'projeto_bebidas\Espumante Cava Freixenet Carta Nevada 750 ml\espumante.html'
+    pagina: 'projeto_bebidas/Espumante_Cava_Freixenet_Carta_Nevada/espumante.html'
   },
   {
     id: 3,
     imagem: 'assets/img/johnnie-walker-red-label-500-ml_1_250.webp',
     nome: 'Johnnie Walker Red Label 500 ml',
     preco: 45,
+    pagina: 'projeto_bebidas/Johnnie_Walker_Red_Label/redlabel.html'
   },
   {
     id: 4,
     imagem: 'assets/img/vietti-barolo-castiglione-750-ml_1_250.webp',
     nome: 'Vinho Vietti Barolo Castiglione 750 ml',
     preco: 750,
+    pagina: 'projeto_bebidas/Vinho_Vietti_Barolo_Castiglione/vinho.html'
   },
   {
     id: 5,
     imagem: 'assets/img/vinhopenfolds-koonunga-hill-shiraz-750-ml_1_250.webp',
     nome: 'Vinho Penfolds Koonunga Hill Shiraz 750 ml',
     preco: 250,
+    pagina: 'projeto_bebidas/Vinho_Penfolds_Koonunga_Hill_Shiraz/penfolds.html'
   },
   {
     id: 6,
