@@ -133,7 +133,7 @@ main {
   color: white;
   display: flex;
   align-items: center;
-
+  justify-content: space-between;
 }
 
 .foot {
@@ -174,4 +174,39 @@ main {
 .fa-trash {
   cursor: pointer;
   color: #333;
+}
+
+@media (max-width: 480px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar {
+    width: 85%;
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 728px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar {
+    width: 80%;
+    max-width: 420px;
+  }
+
 }
